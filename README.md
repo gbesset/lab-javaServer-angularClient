@@ -10,11 +10,31 @@
 * Angular 5.0
 * Angular Material
 
-## Instalation
+## Installation
+### Local
+* lancer le server (springBoot app)
+* lancer Angular (ng serve)
+
+### VPS
+* Mise en place d'une redirection server.monDomaine.fr vers mon VPS
+* Mise en place d'une redirection client.monDomaine.fr vers mon VPS
+* Conf nginx
+   - Ajout conf server = PROXY via proxy_pass (localhost... ou nom domaine)
+   - Ajout conf client (redirection vers repertoire www adéquat)
+* déploiement Server (mvn clean install) et App (ng build --prod)
 
 
-## Authentifiation
+* Lancement server java (java -jar monjar > server.logs &)
+* ps aux | grep java.  et kill -p PID
+* gestion problèmes CORS (ajout @CrossOrigin sur controllers)
 
+### TODO
+problème accès une page quelconque angular -> 404
+gestion 404
+
+
+## Authentification
+oAuth a mettre en place
 
 
 

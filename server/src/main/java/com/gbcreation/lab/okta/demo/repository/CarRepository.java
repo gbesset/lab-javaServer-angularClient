@@ -8,6 +8,6 @@ import com.gbcreation.lab.okta.demo.model.Car;
 
 
 @RepositoryRestResource
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "http://lab-car.gbcreation.fr"})
 public interface  CarRepository extends JpaRepository<Car, Long> {
 }

@@ -28,14 +28,14 @@ public class CarController {
 	    }*/
 	 
 	 @RequestMapping(value="/count",method=RequestMethod.GET)
-	 @CrossOrigin(origins = "http://localhost:4200")
+	 @CrossOrigin(origins = {"http://localhost:4200", "http://lab-car.gbcreation.fr"})
 	    public long countCars() {
 		 	log.debug("Controller : count elemments");
 	        return repository.count();
 	    }
 	 
 	 @RequestMapping(value="/cars",method=RequestMethod.GET)
-	 @CrossOrigin(origins = "http://localhost:4200")
+	 @CrossOrigin(origins = {"http://localhost:4200", "http://lab-car.gbcreation.fr"})
 	    public Collection<Car> cars() {
 		 	log.debug("Controller : retrieve all elemments");
 	        return repository.findAll().stream()
@@ -44,7 +44,7 @@ public class CarController {
 
 	    
 	 @RequestMapping(value="/cool-cars",method=RequestMethod.GET)
-	 @CrossOrigin(origins = "http://localhost:4200")
+	 @CrossOrigin(origins = {"http://localhost:4200", "http://lab-car.gbcreation.fr"})
 	    public Collection<Car> coolCars() {
 		 	log.debug("Controller : retrieve cool elemments");
 	        return repository.findAll().stream()
