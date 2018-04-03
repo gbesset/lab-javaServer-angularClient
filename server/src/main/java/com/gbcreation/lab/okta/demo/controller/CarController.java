@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,12 +28,14 @@ public class CarController {
 	    }*/
 	 
 	 @RequestMapping(value="/count",method=RequestMethod.GET)
+	 @CrossOrigin(origins = "http://localhost:4200")
 	    public long countCars() {
 		 	log.debug("Controller : count elemments");
 	        return repository.count();
 	    }
 	 
 	 @RequestMapping(value="/cars",method=RequestMethod.GET)
+	 @CrossOrigin(origins = "http://localhost:4200")
 	    public Collection<Car> cars() {
 		 	log.debug("Controller : retrieve all elemments");
 	        return repository.findAll().stream()
@@ -42,6 +44,7 @@ public class CarController {
 
 	    
 	 @RequestMapping(value="/cool-cars",method=RequestMethod.GET)
+	 @CrossOrigin(origins = "http://localhost:4200")
 	    public Collection<Car> coolCars() {
 		 	log.debug("Controller : retrieve cool elemments");
 	        return repository.findAll().stream()
