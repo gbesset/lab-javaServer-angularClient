@@ -1,6 +1,10 @@
 # Basic CRUD App with Spring Boot 2.0 & Angular 5.0
 
 
+Permet l'affichage d'éléments sous forme de colonne, en Angular-Material
+Chaque élément possède une image gif (récuéprée sur un serveur distant)
+Possibilité de modifier, supprimer et ajouter un élément. Un gif sera récupéré à partir du nom de l'élément
+
 ## Components
 ### Server
 * Spring boot 2.0
@@ -13,6 +17,8 @@
 ## Installation
 ### Local
 * lancer le server (springBoot app)
+	* mvn clean install
+	* java -jar target/okta-spring-boot-angular-0.0.1.jar &
 * lancer Angular (ng serve)
 
 ### VPS
